@@ -40,7 +40,6 @@ int _printf(const char *format, ...)
 			putchar(format[i]);
 		}
 
-			length++;
 	}
 	return (length);
 }
