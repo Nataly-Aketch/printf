@@ -13,6 +13,10 @@ int printc(va_list list)
 =======
 
 	putchar(c);
+<<<<<<< HEAD
 	return (0);
 >>>>>>> 9c25686dbbc8d326b3cfe989789994b8081180f0
+=======
+	return (1);
+>>>>>>> 602bce648a895f25346b68708612353427051e31
 }
