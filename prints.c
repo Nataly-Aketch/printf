@@ -15,3 +15,4 @@ int prints(va_list list)
 		putchar(*s++);
 	return (0);
 }
+
