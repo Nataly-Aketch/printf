@@ -4,9 +4,10 @@
  * @list: character to be printed
  * Return: printed character
  */
-void printc(va_list list)
+int printc(va_list list)
 {
 	char c = va_arg(list, int);
 
 	putchar(c);
+	return (0);
 }

@@ -4,7 +4,7 @@
  * @list: variable list
  * Return: printed string
  */
-void prints(va_list list)
+int prints(va_list list)
 {
 	char *s;
 
@@ -13,4 +13,5 @@ void prints(va_list list)
 		s = ("null");
 	while (*s)
 		putchar(*s++);
+	return (0);
 }
