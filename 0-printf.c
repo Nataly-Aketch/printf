@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	if (format == NULL)
 		return (-1);
-	while (format[i])
+	for (; format[i]; i++)
 	{
 		putchar(format[i]);
 		length++;
@@ -32,6 +32,9 @@ int _printf(const char *format, ...)
 				case 's':
 					length += prints(list);
 					break;
+				case 'd':
+				case 'i':
+					length += printn(list);
 
 			}
 		}
@@ -40,7 +43,6 @@ int _printf(const char *format, ...)
 			putchar(format[i]);
 			length++;
 		}
-		i++;
 	}
 	return (length);
 }
