@@ -7,6 +7,7 @@
 int printc(va_list list)
 {
 	char c = va_arg(list, int);
+
 	putchar(c);
-	return(0);
+	return (0);
 }
