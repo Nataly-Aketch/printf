@@ -7,13 +7,18 @@
 int prints(va_list list)
 {
 	char *s;
+	int ptr;
 
 	s = va_arg(list, char *);
 	if (!s)
 		s = ("null");
 	(write(1, s, strlen(s)));
-	if (write(1, s, strlen(s)) == -1)
-		return (-1);
+	while (*s)
+	{
+		ptr = putchar(*s++);
+		if (ptr == -1)
+			return (-1);
+	}
 	return (strlen(s));
 }
 
