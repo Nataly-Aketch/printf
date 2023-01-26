@@ -6,13 +6,14 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, length = 0;
+	unsigned int i = 0;
+	int length = 0;
 	va_list list;
 
-	va_start(list, format);
 	if (format == NULL)
 		return (-1);
-	for (; format[i]; i++)
+	va_start(list, format);
+	for (; format[i] && format; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -40,6 +41,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			if (format[i] == '\0')
+				length = length - 1;
 			putchar(format[i]);
 			length++;
 		}
