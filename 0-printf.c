@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			if (format[i] == '\0')
-				length = length - 1;
+				return (1);
 			putchar(format[i]);
 			length++;
 		}
