@@ -13,7 +13,7 @@ int prints(va_list list)
 		s = ("null");
 	(write(1, s, strlen(s)));
 	if (write(1, s, strlen(s)) == -1)
-		return (0);
+		return (-1);
 	return (strlen(s));
 }
 
