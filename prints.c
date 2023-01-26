@@ -12,6 +12,6 @@ int prints(va_list list)
 	if (!s)
 		s = ("null");
 	write(1, s, strlen(s));
-	return (-1);
+	return (strlen(s));
 }
 
