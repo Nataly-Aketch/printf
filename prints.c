@@ -14,9 +14,10 @@ int prints(va_list list)
 		s = ("null");
 	while (*s)
 	{
-		ptr = putchar(*s++);
+		ptr = putchar(*s);
 		if (ptr == -1)
 			return (-1);
+		s++;
 	}
 	return (0);
 }
