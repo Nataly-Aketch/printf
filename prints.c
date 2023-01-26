@@ -11,7 +11,9 @@ int prints(va_list list)
 	s = va_arg(list, char *);
 	if (!s)
 		s = ("null");
-	write(1, s, strlen(s));
-	return (-1);
+	(write(1, s, strlen(s)));
+	if (write(1, s, strlen(s)) == -1)
+		return (0);
+	return (strlen(s));
 }
 
