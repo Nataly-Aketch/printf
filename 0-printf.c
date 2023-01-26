@@ -34,15 +34,11 @@ int _printf(const char *format, ...)
 				case 'i':
 					length += printn(list);
 					break;
-				default:
-					break;
 
 			}
 		}
 		else
 		{
-			if (format[i] == '\0')
-				return (1);
 			putchar(format[i]);
 			length++;
 		}
