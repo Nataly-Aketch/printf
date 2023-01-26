@@ -7,7 +7,7 @@
 int prints(va_list list)
 {
 	char *s;
-	int ptr;
+	int ptr, count = 0;
 
 	s = va_arg(list, char *);
 	if (!s)
@@ -17,8 +17,9 @@ int prints(va_list list)
 		ptr = putchar(*s);
 		if (ptr == -1)
 			return (-1);
+		count++;
 		s++;
 	}
-	return (0);
+	return (count);
 }
 
