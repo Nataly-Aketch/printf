@@ -18,6 +18,6 @@ int prints(va_list list)
 		if (ptr == -1)
 			return (-1);
 	}
-	return (strlen(s));
+	return (0);
 }
 
