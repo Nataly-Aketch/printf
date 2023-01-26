@@ -7,7 +7,10 @@
 int printc(va_list list)
 {
 	char c = va_arg(list, int);
+	int ptr;
 
-	write(1, &c, 1);
+	ptr = putchar(c);
+	if (ptr == -1)
+		return (-1);
 	return (1);
 }

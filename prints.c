@@ -7,10 +7,19 @@
 int prints(va_list list)
 {
 	char *s;
+	int ptr, count = 0;
 
 	s = va_arg(list, char *);
 	if (!s)
 		s = ("null");
-	return (write(1, s, strlen(s)));
+	while (*s)
+	{
+		ptr = putchar(*s);
+		if (ptr == -1)
+			return (-1);
+		count++;
+		s++;
+	}
+	return (count);
 }
 
