@@ -6,20 +6,18 @@
  */
 int printn(va_list list)
 {
-	int n = va_arg(list, int), j, c;
+	int n = va_arg(list, int), j, i = 0;
 
 	if (n < 0)
 	{
-		c = putchar('-');
-		if (c == -1)
-			return (-1);
+		putchar('-');
 		n = -n;
+		i++;
 	}
 	if (n <= 9)
 	{
-		c = putchar(n + '0');
-		if (c == -1)
-			return (-1);
+		putchar(n + '0');
+		i++;
 	}
 	else
 	{
@@ -31,11 +29,10 @@ int printn(va_list list)
 		}
 		while (j > 0)
 		{
-			c = putchar(j % 10 + '0');
-			if (c == -1)
-				return (-1);
+			putchar(j % 10 + '0');
+			i++;
 			j /= 10;
 		}
 	}
-	return (c);
+	return (i);
 }
