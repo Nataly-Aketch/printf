@@ -32,6 +32,9 @@ int _printf(const char *format, ...)
 				case 'd':
 				case 'i':
 					length += printn(list);
+					break;
+				default:
+					break;
 
 			}
 		}
