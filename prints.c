@@ -12,7 +12,6 @@ int prints(va_list list)
 	s = va_arg(list, char *);
 	if (!s)
 		s = ("null");
-	(write(1, s, strlen(s)));
 	while (*s)
 	{
 		ptr = putchar(*s++);
