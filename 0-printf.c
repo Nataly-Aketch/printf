@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (; format[i] && format; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i++] != '%')
 		{
 			i++;
 			switch (format[i])
@@ -37,6 +37,11 @@ int _printf(const char *format, ...)
 
 			}
 		}
+		/*else if (format[i] == '%' && format[i++] == '%')
+		{
+			putchar('%');
+			length++;
+		}*/
 		else
 		{
 			putchar(format[i]);
