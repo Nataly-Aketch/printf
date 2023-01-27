@@ -34,6 +34,8 @@ int _printf(const char *format, ...)
 				case 'i':
 					length += printn(list);
 					break;
+				default:
+					return (-1);
 
 			}
 		}
