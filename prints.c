@@ -11,7 +11,7 @@ int prints(va_list list)
 
 	s = va_arg(list, char *);
 	if (!s)
-		s = ("null");
+		s = ("(null)");
 	while (*s)
 	{
 		ptr = putchar(*s);
