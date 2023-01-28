@@ -20,17 +20,20 @@ int printn(va_list list)
 		putchar(n + '0');
 		i++;
 	}
-	j = 0;
-	while (n > 0)
+	else
 	{
-		j = j * 10 + n % 10;
-		n /= 10;
-	}
-	while (j > 0)
-	{
-		putchar(j + '0');
-		i++;
-		j /= 10;
+		j = 0;
+		while (n > 0)
+		{
+			j = j * 10 + n % 10;
+			n /= 10;
+		}
+		while (j > 0)
+		{
+			putchar(j + '0');
+			i++;
+			j /= 10;
+		}
 	}
 	return (i);
 }
