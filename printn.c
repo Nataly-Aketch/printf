@@ -6,8 +6,8 @@
  */
 int printn(va_list list)
 {
-	long int n = va_arg(list, long int), j;
-	int i = 0;
+	int n = va_arg(list, int), i = 0;
+	long int j;
 
 	if (n < 0)
 	{
