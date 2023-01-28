@@ -6,7 +6,7 @@
  */
 int printn(va_list list)
 {
-	int n = va_arg(list, long int), j;
+	long int n = va_arg(list, long int), j;
 	int i = 0;
 
 	if (n < 0)
@@ -25,12 +25,12 @@ int printn(va_list list)
 		j = 0;
 		while (n > 0)
 		{
-			j = j * 10 + n % 10;
+			j = j * 10 + (n % 10);
 			n /= 10;
 		}
 		while (j > 0)
 		{
-			putchar(j + '0');
+			putchar(j % 10 + '0');
 			i++;
 			j /= 10;
 		}
