@@ -15,6 +15,11 @@ int printn(va_list list)
 		n = -n;
 		i++;
 	}
+	if (n <= 9)
+	{
+		putchar(n + '0');
+		i++;
+	}
 	j = 0;
 	while (n > 0)
 	{
