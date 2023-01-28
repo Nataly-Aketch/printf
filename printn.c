@@ -12,6 +12,7 @@ int printn(va_list list)
 	if (n < 0)
 	{
 		putchar('-');
+		i++;
 		n = -n;
 	}
 	j = 0;
@@ -19,12 +20,12 @@ int printn(va_list list)
 	{
 		j = j * 10 + n % 10;
 		n /= 10;
-		i++;
 	}
 	while (j > 0)
 	{
 		putchar(j + '0');
 		j /= 10;
+		i++;
 	}
 	return (i);
 }
