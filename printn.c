@@ -6,14 +6,14 @@
  */
 int printn(va_list list)
 {
-	long int n = va_arg(list, long int), j;
+	int n = va_arg(list, long int), j;
 	int i = 0;
 
 	if (n < 0)
 	{
 		putchar('-');
-		i++;
 		n = -n;
+		i++;
 	}
 	j = 0;
 	while (n > 0)
@@ -24,8 +24,8 @@ int printn(va_list list)
 	while (j > 0)
 	{
 		putchar(j + '0');
-		j /= 10;
 		i++;
+		j /= 10;
 	}
 	return (i);
 }
